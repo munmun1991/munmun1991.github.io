@@ -1,0 +1,477 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Actor|Ubuntu:500');
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+html {
+  font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+$background : #e0dfd2;
+$guide_bar : #739488;
+$fontcolor : #352e2b;
+
+//ハンバーガーメニュー表示切り替え点
+@media(max-width: 1024px){
+  .for_pc{
+    display: none;
+  }
+}
+@media(min-width: 1025px){
+  .for_sp{display: none;}
+}
+//-----------------------------------
+
+//body全体
+body{
+    font-family: 'Noto Sans Japanese';
+    background: $background;
+    width: 100%;
+    color: $fontcolor;
+}
+.fp-tableCell{
+  text-align: center;
+}
+//-----------------------------------
+
+#section0{
+  top: 70px;
+  background-color: $guide_bar;
+  @media(min-width: 1025px){
+  background-image: url("../images/kotelogo-saishu.jpg");
+  }
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width: 1024px) {
+    img.for_sp{
+      width: 100%;
+      top: 70px;
+    }
+  }
+  //mobile対応
+  @media (min-width: 1601px){
+      
+
+  }
+}
+.section{
+    top: 60px;
+}
+
+ul#menu {
+  z-index: 3;
+  background: $guide_bar;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  display: flex;
+  display: -webkit-flex;
+  background-color: $guide_bar;
+  -webkit-align-items: flex-end; 
+  -ms-align-items    : flex-end;
+  align-items        : flex-end;
+  @media (max-width: 1024px) {
+  height: 70px;
+  }
+} 
+img.topimg{
+   width: 80%;
+  }
+
+li#menu{
+  margin: 0 15px;
+  padding: 0 10px;
+}
+li.for_sp{
+  margin: 20px;
+}
+
+li:first-child {
+  margin-right: auto;
+}
+li a {
+  display: block;
+  margin: 0;
+  padding: 0 20px 20px 20px;
+}
+//--------sp飛び出すメニュー
+@media (max-width: 1024px) {
+    ul.sp_navi_li{
+    margin-bottom: 10px;
+    }
+    #sp_navi_btn {
+    cursor: pointer;
+    }
+    ul.sp_menu_toggle {       //飛び出すメニュー
+        position: absolute;
+        right: 0;
+        top: 70px;
+        width: 100%;
+        z-index: 100;
+        background:#ff6d77;
+        margin:0px;
+        list-style: none;
+        li{
+            margin: 0;
+            padding: 0px;
+        }
+        a{
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 2px;
+            border-bottom: 1px solid #e5e5e5;
+            text-decoration: none;
+            @include fontsize(17)
+        }
+        display: none;
+    }
+    @media (min-width: 400px){
+        .container {
+            width: 100%;
+        }
+    }
+}//header_@media_sp
+
+
+
+
+// Skills
+.profile{
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  img{
+    width: 140px;
+    height: 140px;
+    @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+    }
+  }
+  p{
+    @include fontsize(20);
+    text-align: left;
+    line-height: 1.5em;
+  }
+}
+.profile-contents{
+  padding:12px;
+}
+#skills-container{
+    display: flex;
+    flex-direction: row;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 3% 5%;
+  }
+  h2 {
+    margin-bottom: 60px;
+  }
+  
+  .skill-box{
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    @media (max-width: 768px) {
+    margin: 10px;
+    padding: 10px;
+    }
+  i{
+    @include fontsize(60);
+    padding: 10px;
+    @media (max-width: 768px) {
+    padding: 4px;
+    }
+  }
+  h3{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 10px;
+    @include fontsize(26);
+    @media (max-width: 768px) {
+    padding: 4px;
+    }
+  }
+  p{
+    @include fontsize(20);
+    padding: 10px;
+    line-height: 1.5em;
+  }
+}
+h6{
+  text-align: center;
+}  
+img.title{
+  margin: 7% 0 5% 0;
+  @media (max-width: 1024px) {
+  height: 17px;
+  }
+}
+
+
+  
+  //モバイル用にコンテナを下に落とすコマンド
+  @media (max-width: 1024px) {
+  div#skills-container, .profile{
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 3% 0 3%;
+  }
+  .profile-contents, .skill-box{
+    height: auto;
+    i{
+      @include fontsize(35);
+    }
+    h3{
+      font-family: 'Ubuntu', sans-serif;
+      @include fontsize(20);
+    }
+    p{
+      @include fontsize(12);
+    }
+    img{
+      text-align: center;
+    }
+  }
+}
+
+//----------------------------------------------
+
+
+// Works
+#works {
+  padding-bottom: 0;
+  .works-box {
+    width: 100%;                  // widthを100%にして1列に1つ表示（つまり縦に並ぶ）
+    float: left;
+    height: 100%;
+    a {
+      display: block;
+      position: relative;
+      .works-box-inner {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #FFF;
+        div {
+          position: absolute;
+          margin: auto;
+          height: 5%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px 20px;
+        }
+        h3 {
+          font-size: 1.6rem;
+          margin: 0 0 5px;
+          font-weight: regular;
+        }
+      }
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// desktop
+@media (min-width: 1025px) {
+
+  // Works
+  #works {
+    .works-box {
+      margin: 0;
+      width: (100% / 3);         // widthを33%にして1列に3つ表示（つまり横に並ぶ）
+      a {
+        .works-box-inner {
+          display: none;
+          .button-readmore {
+            &:hover {
+              background-color: darken(#000000, 10%);
+            }
+          }
+        }
+        &:hover {
+          .works-box-inner {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//----------------------------------------------
+.formrun{
+  text-align: center ;
+  margin: 0 auto;
+}
+
+.form{
+  text-align: center ;
+}
+
+  label, input, textarea, button{
+    margin: 12px 0;
+    vertical-align:middle;
+  }
+
+label{
+  color: $fontcolor;
+  @include fontsize(18);
+  @media (max-width: 768px) {
+  @include fontsize(12);
+  }
+}
+input{
+  width: 300px;
+  height: 30px;
+}
+textarea{
+  width: 300px;
+  height: 200px;
+}
+button{
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+div.error{
+  color: red;
+  margin-bottom: 19px;
+}
+div._formrun_gotcha{
+  display: flex;
+}
+
+//------portfolio page
+
+.portfolio-detail{
+  h1{
+    @include fontsize(25);
+    margin: 15px 0;
+    color: $fontcolor;
+    @media (max-width: 1024px){
+      margin-top: 50px;
+    }
+  }
+  p{
+    @include fontsize(20);
+    margin: 10px 0;
+    color: $fontcolor;
+    @media (max-width: 1024px){
+      margin-bottom: 50px;
+    }
+}
+}
+img.portfolio-img{
+  width: 50%;
+  @media(max-width: 768px){
+    width: 80%;
+  }
+}
+
+
+
+
+//------------飛び出すメニューおためし
+        @media (max-width: 550px) {
+            .logo_pc{
+                display:none;
+            }
+            .pc_navi_li{
+                display:none;
+            }
+            
+            div#header_in.container{    //タイトル＋menu
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }//div#header_in.container
+ 
+            ul.sp_navi_li{    //アイコン３つ
+                list-style: none;
+                li{
+                    display: inline;
+                    padding: 0 7px;
+                }
+            }    
+            .logo_sp{
+                h1{
+                    margin-bottom: 5px;
+                }
+            }
+            ul.sp_navi_li{
+                margin-bottom: 10px;
+            }
+            #sp_navi_btn {
+              cursor: pointer;
+            }
+
+            ul.sp_menu_toggle {       //飛び出すメニュー
+                position: absolute;
+                width:100%;
+                z-index: 100;
+                background:#ff6d77;
+                margin:0px;
+                list-style: none;
+                li{
+                    margin: 0;
+                    padding: 0px;
+                }
+                a{
+                    display: block;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 10px 2px;
+                    border-bottom: 1px solid #e5e5e5;
+                    text-decoration: none;
+                    @include fontsize(17)
+                }
+                display: none;
+            }
+            @media (min-width: 400px){
+                .container {
+                    width: 100%;
+                }
+            }
+        }//header_@media_sp

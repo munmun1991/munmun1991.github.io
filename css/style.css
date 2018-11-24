@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css?family=Actor|Ubuntu:500");
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+html {
+  font-size: 62.5%; }
+
+@media (max-width: 1024px) {
+  .for_pc {
+    display: none; } }
+@media (min-width: 1025px) {
+  .for_sp {
+    display: none; } }
+body {
+  font-family: 'Noto Sans Japanese';
+  background: #e0dfd2;
+  width: 100%;
+  color: #352e2b; }
+
+.fp-tableCell {
+  text-align: center; }
+
+#section0 {
+  top: 70px;
+  background-color: #739488;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: center center; }
+  @media (min-width: 1025px) {
+    #section0 {
+      background-image: url("../images/kotelogo-saishu.jpg"); } }
+  @media (max-width: 1024px) {
+    #section0 img.for_sp {
+      width: 100%;
+      top: 70px; } }
+
+.section {
+  top: 60px; }
+
+ul#menu {
+  z-index: 3;
+  background: #739488;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  display: flex;
+  display: -webkit-flex;
+  background-color: #739488;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end; }
+  @media (max-width: 1024px) {
+    ul#menu {
+      height: 70px; } }
+
+img.topimg {
+  width: 80%; }
+
+li#menu {
+  margin: 0 15px;
+  padding: 0 10px; }
+
+li.for_sp {
+  margin: 20px; }
+
+li:first-child {
+  margin-right: auto; }
+
+li a {
+  display: block;
+  margin: 0;
+  padding: 0 20px 20px 20px; }
+
+@media (max-width: 1024px) {
+  ul.sp_navi_li {
+    margin-bottom: 10px; }
+
+  #sp_navi_btn {
+    cursor: pointer; }
+
+  ul.sp_menu_toggle {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 100%;
+    z-index: 100;
+    background: #ff6d77;
+    margin: 0px;
+    list-style: none;
+    display: none; }
+    ul.sp_menu_toggle li {
+      margin: 0;
+      padding: 0px; }
+    ul.sp_menu_toggle a {
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 2px;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      font-size: 17px;
+      font-size: 1.7rem; } }
+@media (max-width: 1024px) and (min-width: 400px) {
+  .container {
+    width: 100%; } }
+.profile {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .profile img {
+    width: 140px;
+    height: 140px; }
+    @media (max-width: 768px) {
+      .profile img {
+        width: 100px;
+        height: 100px; } }
+  .profile p {
+    font-size: 20px;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1.5em; }
+
+.profile-contents {
+  padding: 12px; }
+
+#skills-container {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 3% 5%; }
+
+h2 {
+  margin-bottom: 60px; }
+
+.skill-box {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  height: auto; }
+  @media (max-width: 768px) {
+    .skill-box {
+      margin: 10px;
+      padding: 10px; } }
+  .skill-box i {
+    font-size: 60px;
+    font-size: 6rem;
+    padding: 10px; }
+    @media (max-width: 768px) {
+      .skill-box i {
+        padding: 4px; } }
+  .skill-box h3 {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 10px;
+    font-size: 26px;
+    font-size: 2.6rem; }
+    @media (max-width: 768px) {
+      .skill-box h3 {
+        padding: 4px; } }
+  .skill-box p {
+    font-size: 20px;
+    font-size: 2rem;
+    padding: 10px;
+    line-height: 1.5em; }
+
+h6 {
+  text-align: center; }
+
+img.title {
+  margin: 7% 0 5% 0; }
+  @media (max-width: 1024px) {
+    img.title {
+      height: 17px; } }
+
+@media (max-width: 1024px) {
+  div#skills-container, .profile {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 3% 0 3%; }
+
+  .profile-contents, .skill-box {
+    height: auto; }
+    .profile-contents i, .skill-box i {
+      font-size: 35px;
+      font-size: 3.5rem; }
+    .profile-contents h3, .skill-box h3 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+      font-size: 2rem; }
+    .profile-contents p, .skill-box p {
+      font-size: 12px;
+      font-size: 1.2rem; }
+    .profile-contents img, .skill-box img {
+      text-align: center; } }
+#works {
+  padding-bottom: 0; }
+  #works .works-box {
+    width: 100%;
+    float: left;
+    height: 100%; }
+    #works .works-box a {
+      display: block;
+      position: relative; }
+      #works .works-box a .works-box-inner {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #FFF; }
+        #works .works-box a .works-box-inner div {
+          position: absolute;
+          margin: auto;
+          height: 5%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px 20px; }
+        #works .works-box a .works-box-inner h3 {
+          font-size: 1.6rem;
+          margin: 0 0 5px;
+          font-weight: regular; }
+    #works .works-box img {
+      max-width: 100%;
+      display: block; }
+  #works::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+@media (min-width: 1025px) {
+  #works .works-box {
+    margin: 0;
+    width: 33.33333%; }
+    #works .works-box a .works-box-inner {
+      display: none; }
+      #works .works-box a .works-box-inner .button-readmore:hover {
+        background-color: black; }
+    #works .works-box a:hover .works-box-inner {
+      display: block;
+      width: 100%; } }
+.formrun {
+  text-align: center;
+  margin: 0 auto; }
+
+.form {
+  text-align: center; }
+
+label, input, textarea, button {
+  margin: 12px 0;
+  vertical-align: middle; }
+
+label {
+  color: #352e2b;
+  font-size: 18px;
+  font-size: 1.8rem; }
+  @media (max-width: 768px) {
+    label {
+      font-size: 12px;
+      font-size: 1.2rem; } }
+
+input {
+  width: 300px;
+  height: 30px; }
+
+textarea {
+  width: 300px;
+  height: 200px; }
+
+button {
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #ffffff; }
+
+div.error {
+  color: red;
+  margin-bottom: 19px; }
+
+div._formrun_gotcha {
+  display: flex; }
+
+.portfolio-detail h1 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: #352e2b; }
+  @media (max-width: 1024px) {
+    .portfolio-detail h1 {
+      margin-top: 50px; } }
+.portfolio-detail p {
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #352e2b; }
+  @media (max-width: 1024px) {
+    .portfolio-detail p {
+      margin-bottom: 50px; } }
+
+img.portfolio-img {
+  width: 50%; }
+  @media (max-width: 768px) {
+    img.portfolio-img {
+      width: 80%; } }
+
+@media (max-width: 550px) {
+  .logo_pc {
+    display: none; }
+
+  .pc_navi_li {
+    display: none; }
+
+  div#header_in.container {
+    text-align: center;
+    margin: 0;
+    padding: 0; }
+
+  ul.sp_navi_li {
+    list-style: none; }
+    ul.sp_navi_li li {
+      display: inline;
+      padding: 0 7px; }
+
+  .logo_sp h1 {
+    margin-bottom: 5px; }
+
+  ul.sp_navi_li {
+    margin-bottom: 10px; }
+
+  #sp_navi_btn {
+    cursor: pointer; }
+
+  ul.sp_menu_toggle {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background: #ff6d77;
+    margin: 0px;
+    list-style: none;
+    display: none; }
+    ul.sp_menu_toggle li {
+      margin: 0;
+      padding: 0px; }
+    ul.sp_menu_toggle a {
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 2px;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      font-size: 17px;
+      font-size: 1.7rem; } }
+@media (max-width: 550px) and (min-width: 400px) {
+  .container {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
